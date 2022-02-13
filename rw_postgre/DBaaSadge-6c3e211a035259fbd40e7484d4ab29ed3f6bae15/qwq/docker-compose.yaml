@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    volumes:
+      - ./html/:/var/www/html/
+      - ./start.sh:/start.sh
+    entrypoint: sh /start.sh
+    ports:
+      - "60080:80"
